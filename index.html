@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-GB">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CC Ventures</title>
+<style>
+  /* Single-column legal page: one readable measure, quiet type, accent only on the eyebrow. */
+  :root { --bg: #fbfaf7; --fg: #1d1b16; --muted: #5d584c; --rule: #e4e0d6; --accent: #2f7d5b;
+          --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #141310; --fg: #eeeae0; --muted: #aaa392; --rule: #2e2b24; --accent: #5fd3a0; color-scheme: dark; } }
+  :root[data-theme="dark"] { --bg: #141310; --fg: #eeeae0; --muted: #aaa392; --rule: #2e2b24; --accent: #5fd3a0; color-scheme: dark; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 16px; line-height: 1.6;
+         padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 56px; }
+  main { max-width: 42rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .25rem; text-wrap: balance; }
+  .eyebrow { color: var(--accent); font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .5rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); text-wrap: balance; }
+  p, li { max-width: 65ch; }
+  ul { padding-left: 1.25rem; }
+  li + li { margin-top: .35rem; }
+  strong { font-weight: 650; }
+</style>
+<main>
+  <p class="eyebrow">CC Ventures</p>
+  <h1>Small, honest utility apps for the UK</h1>
+  <p>CC Ventures builds Android apps that keep your records on your own device: no accounts, no servers, no tracking. Each app is free to use; a one-time Pro unlock removes a limit.</p>
+  <h2>Apps</h2>
+  <ul>
+    <li><strong>FieldProof</strong>: before-and-after photo reports for trades, exported as PDF. <a href="apps/fieldproof/privacy.html">Privacy policy</a></li>
+    <li><strong>Quiet Water</strong>: a private fishing catch and spot log with CSV export. <a href="apps/quiet-water/privacy.html">Privacy policy</a></li>
+    <li><strong>Dig Ledger</strong>: metal-detecting permissions, finds and an offline scheduled-monument check for England. <a href="apps/dig-ledger/privacy.html">Privacy policy</a></li>
+    <li><strong>Claim Ledger</strong>: the invoice schedule for a UK self-build VAT reclaim (HMRC VAT431NB), as CSV and PDF. <a href="apps/claim-ledger/privacy.html">Privacy policy</a></li>
+    <li><strong>Attorney Account</strong>: the records a property and financial affairs attorney keeps under a UK lasting power of attorney, as an account for any period. <a href="apps/attorney-account/privacy.html">Privacy policy</a> · <a href="apps/attorney-account/template.html">Free account template</a></li>
+  </ul>
+  <h2>Support</h2>
+  <p>Email CCventures243@gmail.com (the same address is on each app's Google Play listing). Replies come from CC Ventures support; some first replies are drafted by an AI assistant and checked before sending.</p>
+  <h2>Who we are</h2>
+  <p>CC Ventures is the trading name under which these apps are published on Google Play. The legal name and address are shown on the Google Play developer profile.</p>
+</main>
+</html>

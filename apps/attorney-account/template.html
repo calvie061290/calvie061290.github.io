@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attorney Account Template</title>
+<style>
+  /* Single-column legal page: one readable measure, quiet type, accent only on the eyebrow. */
+  :root { --bg: #fbfaf7; --fg: #1d1b16; --muted: #5d584c; --rule: #e4e0d6; --accent: #2f7d5b;
+          --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #141310; --fg: #eeeae0; --muted: #aaa392; --rule: #2e2b24; --accent: #5fd3a0; color-scheme: dark; } }
+  :root[data-theme="dark"] { --bg: #141310; --fg: #eeeae0; --muted: #aaa392; --rule: #2e2b24; --accent: #5fd3a0; color-scheme: dark; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 16px; line-height: 1.6;
+         padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 56px; }
+  main { max-width: 42rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .25rem; text-wrap: balance; }
+  .eyebrow { color: var(--accent); font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .5rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); text-wrap: balance; }
+  p, li { max-width: 65ch; }
+  ul { padding-left: 1.25rem; }
+  li + li { margin-top: .35rem; }
+  strong { font-weight: 650; }
+</style>
+<main>
+  <p class="eyebrow">Free template</p>
+  <h1>Keeping records as an attorney: a free account template</h1>
+  <p>If you act for someone under a property and financial affairs lasting power of attorney in England and Wales, GOV.UK says to keep a record of important decisions and when you made them, the donor's assets, income and how you spend their money, who you asked for advice and any disagreements, and your receipts and expenses. This page gives you a spreadsheet template for that, free, and explains each column. It is record-keeping only, not legal advice, and it is not connected to the Office of the Public Guardian or any government body.</p>
+  <h2>Download</h2>
+  <p><a href="template.csv" download>attorney-account-template.csv</a> opens in Excel, Google Sheets or Numbers. Keep one file per donor and one row per entry.</p>
+  <h2>The columns, and why they are there</h2>
+  <ul>
+    <li><strong>Section</strong>: the kind of entry, in the order the Office of the Public Guardian asks about: assets and debts on a date, income, general spending, specific spending that is not obvious from a bank statement, gifts, donations and loans, your expenses, decisions, and addresses where the donor lived for more than six weeks.</li>
+    <li><strong>Date, Description, Counterparty, Method, Amount</strong>: what happened, with whom, how it was paid and how much. Use the balance on a date for assets and debts.</li>
+    <li><strong>Receipt and Evidence note</strong>: GOV.UK says to keep receipts. Where there is none, write what evidence you do hold.</li>
+    <li><strong>Gift kind, Relationship, Occasion</strong>: for gifts, donations and loans. GOV.UK sets what an attorney may give without the Court of Protection; the template records what was given, it does not judge it. See gov.uk/manage-lasting-power-attorney/property-financial-affairs.</li>
+    <li><strong>Who consulted, Disagreement, Outcome</strong>: for decisions. Small everyday decisions do not need recording.</li>
+    <li><strong>Recorded at and Amended</strong>: when you first wrote the entry down and whether you changed it later. If anyone ever questions your records, a plain history of when things were written helps.</li>
+  </ul>
+  <h2>Doing it on your phone</h2>
+  <p>Attorney Account is our Android app that keeps the same records on your phone, with receipt photos, a dated account for any period, free CSV export and a free backup. Nothing leaves the phone. The app is being prepared for Google Play; this page will link to it when it is live.</p>
+  <h2>Sources</h2>
+  <p>GOV.UK, Manage a lasting power of attorney: Attorney records and duties; Property and financial affairs attorneys. Mental Capacity Act Code of Practice, duty to keep accounts.</p>
+</main>
+</html>

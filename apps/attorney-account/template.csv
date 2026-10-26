@@ -1,0 +1,8 @@
+Section,Date,Description,Counterparty,Method,Amount (GBP),Receipt (Y/N),Evidence note,Gift kind,Relationship,Occasion,Who consulted,Disagreement,Outcome,Recorded at,Amended (Y/N)
+Asset: balance or value on a date,2026-01-01,Nationwide current account,,,4820.00,,,,,,,,,2026-01-02 09:00,N
+Income,2026-02-01,State pension,DWP,Bank transfer,1150.40,N,,,,,,,,2026-02-01 10:05,N
+General spending,2026-02-10,Groceries,Tesco,Card,86.20,N,,,,,,,,2026-02-10 18:30,N
+Specific spending (not clear from a bank statement),2026-02-14,Taxi to hospital appointment,A1 Cabs,Cash,40.00,N,Driver receipt in folder 3,,,,,,,2026-02-14 16:00,N
+"Gift, donation or loan",2026-03-03,Birthday,Amy,Bank transfer,50.00,N,,Gift,granddaughter,birthday,,,,2026-03-03 09:10,N
+Attorney expense,2026-03-05,Postage for bank forms,Post Office,Card,12.60,Y,,,,,,,,2026-03-05 12:00,N
+Decision,2026-03-10,Agreed two weeks of respite care,,,,,,,,,GP and my sister,None,Booked for April,2026-03-10 20:00,N
