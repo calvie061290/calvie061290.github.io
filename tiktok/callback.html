@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Useful Small Systems · TikTok connected</title>
+<style>body{font-family:system-ui,sans-serif;background:#F4EFE6;color:#191613;margin:0;display:grid;place-items:center;min-height:100vh}main{max-width:520px;padding:32px}code{background:#E9E1D2;padding:2px 6px;border-radius:6px;word-break:break-all}</style></head>
+<body><main><h1>TikTok authorised</h1><p id="s">Reading the response…</p>
+<p>Copy the code below into the publisher setup on the PC. This page stores nothing and sends nothing anywhere.</p><p><code id="c"></code></p>
+<script>const q=new URLSearchParams(location.search);const code=q.get('code'),err=q.get('error');document.getElementById('s').textContent=err?('TikTok returned an error: '+err):(code?'Authorisation code received.':'No code in the URL.');document.getElementById('c').textContent=code||'';</script>
+</main></body></html>
