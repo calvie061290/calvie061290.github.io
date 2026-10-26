@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Useful Small Systems · TikTok publisher</title>
+<meta name="robots" content="noindex">
+<style>
+  body{font-family:system-ui,sans-serif;background:#F4EFE6;color:#191613;margin:0}
+  main{max-width:640px;margin:0 auto;padding:40px 20px}
+  h1{font-size:1.8rem;margin:0 0 6px}
+  p,li{line-height:1.5;color:#4B443B}
+  label{display:block;font-weight:600;margin:18px 0 6px}
+  input{width:100%;box-sizing:border-box;padding:10px 12px;border:2px solid #191613;border-radius:10px;font-size:1rem;background:#FFFDF8}
+  button{margin-top:16px;background:#191613;color:#F4EFE6;border:0;padding:12px 20px;border-radius:999px;font-weight:600;font-size:1rem;cursor:pointer}
+  button:disabled{opacity:.4;cursor:not-allowed}
+  .step{background:#FFFDF8;border:2px solid #E9E1D2;border-radius:14px;padding:16px 18px;margin-top:18px}
+  .step h2{font-size:1.05rem;margin:0 0 6px}
+  code{background:#E9E1D2;padding:2px 6px;border-radius:6px}
+  footer{margin-top:32px;font-size:.9rem;color:#4B443B}
+  footer a{color:inherit}
+</style>
+</head>
+<body>
+<main>
+  <h1>Useful Small Systems · TikTok publisher</h1>
+  <p>Owner-only tool. It connects the Useful Small Systems TikTok account to the publisher that runs on the owner's PC, so one finished reel a day can be posted. Nothing is stored on this page or sent anywhere except to TikTok's own sign-in.</p>
+
+  <div class="step">
+    <h2>1. Connect TikTok</h2>
+    <label for="key">Client key (from the TikTok developer portal)</label>
+    <input id="key" autocomplete="off" placeholder="aw…">
+    <button id="go">Connect with TikTok</button>
+    <p>You will be sent to TikTok to sign in and allow: profile info, upload video, post video.</p>
+  </div>
+
+  <div class="step">
+    <h2>2. Finish on the PC</h2>
+    <p>TikTok sends you back to the callback page with a one-time code. On the PC run
+      <code>python -m calvin_automation.tiktok_publish exchange &lt;code&gt;</code>, set the two env lines it prints, then
+      <code>python -m calvin_automation.tiktok_publish publish &lt;post_id&gt; --approval A-NNN</code>.</p>
+  </div>
+
+  <div class="step">
+    <h2>3. Check the post</h2>
+    <p><code>python -m calvin_automation.tiktok_publish status &lt;publish_id&gt;</code> shows PUBLISH_COMPLETE, and the video appears on the account (private while the app is under review).</p>
+  </div>
+
+  <footer><a href="/usefulsmallsystems/">Useful Small Systems</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></footer>
+</main>
+<script>
+(function(){
+  var key=document.getElementById('key'), go=document.getElementById('go');
+  try{ key.value=localStorage.getItem('tt_client_key')||''; }catch(e){}
+  go.addEventListener('click',function(){
+    var k=key.value.trim(); if(!k){key.focus();return;}
+    try{ localStorage.setItem('tt_client_key',k); }catch(e){}
+    var state=Math.random().toString(36).slice(2,14);
+    try{ sessionStorage.setItem('tt_state',state); }catch(e){}
+    var q=new URLSearchParams({client_key:k,scope:'user.info.basic,video.upload,video.publish',response_type:'code',
+      redirect_uri:'https://calvie061290.github.io/tiktok/callback.html',state:state});
+    location.href='https://www.tiktok.com/v2/auth/authorize/?'+q.toString();
+  });
+})();
+</script>
+</body>
+</html>
